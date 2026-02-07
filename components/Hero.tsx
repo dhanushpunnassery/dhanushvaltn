@@ -29,11 +29,14 @@ export default function Hero() {
                     "My beautiful wife, my forever love... You are the only Rose that makes my world complete."
                 </p>
                 <motion.div
-                    className="mt-8 text-4xl"
-                    animate={{ scale: [1, 1.2, 1] }}
+                    className="mt-8 text-4xl flex flex-col items-center"
+                    animate={{ scale: [1, 1.1, 1] }}
                     transition={{ repeat: Infinity, duration: 2 }}
                 >
-                    🌹
+                    <span>🌹</span>
+                    <span className="mt-2 text-lg text-rose-500 font-serif italic">
+                        - your sweet mio
+                    </span>
                 </motion.div>
             </motion.div>
 
