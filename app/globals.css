@@ -33,3 +33,18 @@ h5,
 h6 {
   font-family: var(--font-serif);
 }
+
+/* Hide Next.js Dev Indicator */
+#next-logo,
+#__next-build-watcher,
+
+/* Also catch typical Next.js toast/indicators */
+[data-nextjs-toast],
+[data-nextjs-toast-errors],
+[data-nextjs-dev-overlay] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+}
