@@ -152,12 +152,12 @@ export default function LoveNote() {
                         transition={{ duration: 0.8 }}
                         className="bg-white p-6 md:p-10 rounded-2xl shadow-2xl max-w-2xl text-center border-4 border-rose-200 z-30 m-4"
                     >
-                        <h3 className="text-3xl md:text-5xl font-serif text-rose-600 font-bold mb-6">My Dearest Anjoosey,</h3>
+                        <h3 className="text-3xl md:text-5xl font-serif text-rose-600 font-bold mb-6">My Dearest Achu,</h3>
                         <p className="text-gray-800 text-lg md:text-2xl leading-relaxed font-serif font-medium mb-8">
                             "On this Rose Day, I want to say that you are the most beautiful flower in my life.
                             Every moment with you is a blessing. I love you so much! 😘😘"
                         </p>
-                        <p className="text-rose-500 font-bold text-xl md:text-2xl">- Your Hubby</p>
+                        <p className="text-rose-500 font-bold text-xl md:text-2xl">- Your Kuttan</p>
 
                         <button
                             onClick={() => { setScore(0); setGameState('idle'); setTargets([]); }}

@@ -5,7 +5,7 @@ import FloatingPetals from './FloatingPetals';
 
 export default function Hero() {
     return (
-        <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-pink-50 to-red-50 text-center p-6">
+        <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-rose-100 via-pink-100 to-red-50 text-center p-6">
             <FloatingPetals />
 
             <motion.div
@@ -15,7 +15,7 @@ export default function Hero() {
                 className="z-10"
             >
                 <h1 className="text-6xl md:text-8xl font-serif text-rose-600 font-bold drop-shadow-sm mb-4">
-                    Happy Rose Day Anjoosey 🌹
+                    Happy Valentine's Day Achu ❤️
                 </h1>
             </motion.div>
 
@@ -25,17 +25,17 @@ export default function Hero() {
                 transition={{ delay: 1, duration: 1 }}
                 className="z-10 max-w-lg"
             >
-                <p className="text-xl md:text-2xl text-rose-800 font-light italic">
-                    "My beautiful wife, my forever love... You are the only Rose that makes my world complete."
+                <p className="text-xl md:text-3xl text-rose-800 font-light italic leading-relaxed">
+                    "My beautiful Achu, today and forever, you are my Valentine. I love you more than words can say."
                 </p>
                 <motion.div
-                    className="mt-8 text-4xl flex flex-col items-center"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ repeat: Infinity, duration: 2 }}
+                    className="mt-12 text-5xl flex flex-col items-center"
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                 >
-                    <span>🌹</span>
-                    <span className="mt-2 text-lg text-rose-500 font-serif italic">
-                        - your sweet mio
+                    <span>💖</span>
+                    <span className="mt-4 text-lg text-rose-500 font-serif italic">
+                        - your sweet Kuttan
                     </span>
                 </motion.div>
             </motion.div>
@@ -46,7 +46,7 @@ export default function Hero() {
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
             >
-                <p className="text-rose-400 text-sm">Scroll Down</p>
+                <p className="text-rose-400 text-sm tracking-widest uppercase">Scroll for Love</p>
             </motion.div>
         </section>
     );

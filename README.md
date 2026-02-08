@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Customization
+
+To personalize this for your girlfriend:
+
+1.  **Replace Images**: Replace the images in `public/images/` with your own photos.
+    *   `us1.png`, `us2.png`, `us3.png`, `mosaic_park.png`, `mosaic_ride.png`
+    *   Make sure to keep the filenames same or update the code to match new filenames.
+    *   **Note**: The code now uses `.png` extension. If you use `.jpg` or `.jpeg`, update the file extensions in `components/Gallery.tsx` and `lib/puzzleData.ts`.
+
+2.  **Update Names & Messages**:
+    *   Open `components/Hero.tsx`: Replace `[Name]` and `[Partner]` with your names.
+    *   Open `components/LoveNote.tsx`: Replace `[Name]` with your names.
+    *   Open `components/Gallery.tsx`: Update the `photos` array with your own captions and descriptions.
+    *   Open `lib/puzzleData.ts`: Update the `PUZZLE_PHOTOS` object with your own titles and messages.
