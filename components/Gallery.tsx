@@ -132,7 +132,7 @@ export default function Gallery() {
                     transition={{ duration: 0.8 }}
                     className="relative group perspective-1000"
                 >
-                    <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                    <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
                         {/* The Actual Image (Underneath) */}
                         <div className="absolute inset-0">
                             <Image

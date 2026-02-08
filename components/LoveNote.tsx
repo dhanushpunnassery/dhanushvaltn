@@ -77,7 +77,7 @@ export default function LoveNote() {
     };
 
     return (
-        <section className="min-h-screen py-20 px-4 bg-rose-50 flex flex-col items-center justify-center relative overflow-hidden">
+        <section className="min-h-[100dvh] py-20 px-4 bg-rose-50 flex flex-col items-center justify-center relative overflow-hidden">
 
             <AnimatePresence mode="wait">
                 {gameState === 'idle' && (
