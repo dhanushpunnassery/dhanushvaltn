@@ -15,7 +15,7 @@ export default function MosaicGame() {
                 Select a memory to unlock a special message! Piece together the moments we cherish. ❤️
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl w-full">
                 {Object.entries(PUZZLE_PHOTOS).map(([key, photo]) => (
                     <Link href={`/puzzle?id=${key}`} key={key}>
                         <motion.div

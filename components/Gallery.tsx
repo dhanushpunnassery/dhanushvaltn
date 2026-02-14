@@ -32,30 +32,33 @@ export default function Gallery() {
     const [scratchPercent, setScratchPercent] = useState(0);
 
     useEffect(() => {
-        const canvas = canvasRef.current;
-        if (!canvas) return;
+        const handleResize = () => {
+            const canvas = canvasRef.current;
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
 
-        const ctx = canvas.getContext('2d');
-        if (!ctx) return;
+            const parent = canvas.parentElement;
+            if (parent) {
+                canvas.width = parent.clientWidth;
+                canvas.height = parent.clientHeight;
 
-        // Set canvas size to match parent
-        const parent = canvas.parentElement;
-        if (parent) {
-            canvas.width = parent.clientWidth;
-            canvas.height = parent.clientHeight;
-        }
+                // Redraw fog if not scratched
+                if (!isScratched) {
+                    ctx.fillStyle = '#9f1239'; // Rose-800 color
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.font = 'bold 20px serif';
+                    ctx.fillStyle = '#ffe4e6'; // Rose-100
+                    ctx.textAlign = 'center';
+                    ctx.fillText("Rub to Reveal Memory", canvas.width / 2, canvas.height / 2);
+                }
+            }
+        };
 
-        // Fill with "fog"
-        ctx.fillStyle = '#9f1239'; // Rose-800 color
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Add instruction text
-        ctx.font = 'bold 20px serif';
-        ctx.fillStyle = '#ffe4e6'; // Rose-100
-        ctx.textAlign = 'center';
-        ctx.fillText("Rub to Reveal Memory", canvas.width / 2, canvas.height / 2);
-
-    }, []);
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isScratched]);
 
     const handleScratch = (e: React.MouseEvent | React.TouchEvent) => {
         if (isScratched) return;

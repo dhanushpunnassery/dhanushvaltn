@@ -25,7 +25,7 @@ export default function PhotoGrid() {
                     <p className="mt-4 text-gray-600 italic">Snapshots of our journey together</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[200px] gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4">
                     {galleryImages.map((img, index) => (
                         <motion.div
                             key={index}
@@ -33,7 +33,9 @@ export default function PhotoGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ scale: 1.02 }}
-                            className={`relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300 ${img.span}`}
+                            className={`relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300 ${index === 0 ? 'sm:col-span-2 sm:row-span-2' :
+                                    index === 4 ? 'sm:col-span-2' : 'col-span-1'
+                                }`}
                             onClick={() => setSelectedImage(img.src)}
                         >
                             <Image

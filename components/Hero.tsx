@@ -14,7 +14,7 @@ export default function Hero() {
                 transition={{ duration: 1.5, ease: "easeOut" }}
                 className="z-10"
             >
-                <h1 className="text-5xl md:text-8xl font-serif text-rose-600 font-bold drop-shadow-sm mb-4">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif text-rose-600 font-bold drop-shadow-sm mb-4 px-4">
                     Happy Valentine's Day Achu ❤️
                 </h1>
             </motion.div>
