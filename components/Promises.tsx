@@ -44,7 +44,7 @@ const PROMISES = [
 
 export default function Promises() {
     return (
-        <section className="py-24 px-4 bg-white relative overflow-hidden">
+        <section className="py-24 px-4 bg-transparent relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-rose-50/50 to-transparent" />
 
             <div className="max-w-6xl mx-auto">
@@ -68,7 +68,7 @@ export default function Promises() {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
                             whileHover={{ y: -10 }}
-                            className="bg-rose-50/30 p-8 rounded-3xl border border-rose-100 hover:border-rose-300 hover:shadow-xl transition-all group"
+                            className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-rose-300 hover:shadow-2xl transition-all group"
                         >
                             <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-white shadow-sm group-hover:scale-110 transition-transform duration-500`}>
                                 <promise.icon className={`w-8 h-8 text-rose-500`} />

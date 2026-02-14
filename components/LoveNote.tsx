@@ -77,7 +77,7 @@ export default function LoveNote() {
     };
 
     return (
-        <section className="min-h-[100dvh] py-20 px-4 bg-rose-50 flex flex-col items-center justify-center relative overflow-hidden">
+        <section className="min-h-[100dvh] py-20 px-4 bg-transparent flex flex-col items-center justify-center relative overflow-hidden">
 
             <AnimatePresence mode="wait">
                 {gameState === 'idle' && (
@@ -100,7 +100,7 @@ export default function LoveNote() {
                 )}
 
                 {gameState === 'playing' && (
-                    <div className="fixed inset-0 z-20 bg-rose-50/90 cursor-crosshair overflow-hidden">
+                    <div className="fixed inset-0 z-20 bg-rose-50/40 backdrop-blur-md cursor-crosshair overflow-hidden">
                         <div className="absolute top-10 left-0 right-0 text-center pointer-events-none">
                             <h3 className="text-3xl font-bold text-rose-600">Score: {score} / {TARGET_SCORE}</h3>
                             {score >= 6 && score <= 7 && <p className="text-orange-500 font-bold animate-pulse">Getting Faster! ⚡</p>}
@@ -150,7 +150,7 @@ export default function LoveNote() {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="bg-white p-6 md:p-10 rounded-2xl shadow-2xl max-w-2xl text-center border-4 border-rose-200 z-30 m-4"
+                        className="bg-white/60 backdrop-blur-lg p-6 md:p-10 rounded-2xl shadow-2xl max-w-2xl text-center border-4 border-white/50 z-30 m-4"
                     >
                         <h3 className="text-2xl md:text-5xl font-serif text-rose-600 font-bold mb-4 md:mb-6">My Dearest Achu,</h3>
                         <p className="text-gray-800 text-lg md:text-2xl leading-relaxed font-serif font-medium mb-6 md:mb-8">

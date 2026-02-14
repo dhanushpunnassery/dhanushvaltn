@@ -38,7 +38,7 @@ export default function TruthOrDare() {
     };
 
     return (
-        <section className="py-20 px-4 bg-gradient-to-br from-rose-50 via-white to-pink-50 relative overflow-hidden">
+        <section className="py-20 px-4 bg-transparent relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-rose-200/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-200/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />

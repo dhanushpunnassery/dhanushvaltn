@@ -17,7 +17,7 @@ export default function PhotoGrid() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     return (
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-transparent">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-serif text-rose-900 mb-4">Gallery of Love</h2>
@@ -34,7 +34,7 @@ export default function PhotoGrid() {
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ scale: 1.02 }}
                             className={`relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300 w-full ${index === 0 ? 'sm:col-span-2 sm:row-span-2 min-h-[300px]' :
-                                    index === 4 ? 'sm:col-span-2 min-h-[200px]' : 'col-span-1 min-h-[200px]'
+                                index === 4 ? 'sm:col-span-2 min-h-[200px]' : 'col-span-1 min-h-[200px]'
                                 }`}
                             onClick={() => setSelectedImage(img.src)}
                         >

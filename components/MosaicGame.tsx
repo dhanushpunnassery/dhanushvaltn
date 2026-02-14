@@ -7,7 +7,7 @@ import { PUZZLE_PHOTOS } from '@/lib/puzzleData';
 
 export default function MosaicGame() {
     return (
-        <section className="py-16 px-4 bg-gradient-to-r from-rose-50 to-pink-50 min-h-[400px] flex flex-col items-center justify-center">
+        <section className="py-16 px-4 bg-transparent min-h-[400px] flex flex-col items-center justify-center">
             <h2 className="text-3xl md:text-4xl font-serif text-rose-800 mb-8 font-bold">
                 🧩 Our Love Puzzle
             </h2>
@@ -21,7 +21,7 @@ export default function MosaicGame() {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white p-4 rounded-2xl shadow-xl border-4 border-white hover:border-rose-300 transition-colors group cursor-pointer w-full"
+                            className="bg-white/40 backdrop-blur-md p-4 rounded-2xl shadow-xl border-4 border-white/50 hover:border-rose-300 transition-colors group cursor-pointer w-full"
                         >
                             <div className="relative h-64 w-full overflow-hidden rounded-xl mb-4">
                                 <Image

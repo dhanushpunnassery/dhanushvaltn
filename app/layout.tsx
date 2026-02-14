@@ -17,6 +17,8 @@ export const viewport = {
   userScalable: false,
 };
 
+import GlobalBackground from "@/components/GlobalBackground";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,7 +31,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased bg-transparent overflow-x-hidden">
+        <GlobalBackground />
+        {children}
+      </body>
     </html>
   );
 }

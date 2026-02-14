@@ -122,7 +122,7 @@ export default function Gallery() {
     };
 
     return (
-        <section className="min-h-screen py-20 px-4 bg-rose-50/30 text-center">
+        <section className="min-h-screen py-20 px-4 bg-transparent text-center">
             <h2 className="text-4xl md:text-5xl font-serif text-rose-900 mb-4 animate-fade-in-up">Our Beautiful Moments</h2>
             <p className="text-rose-700 mb-16 italic text-lg">Unlock our precious memories...</p>
 
@@ -135,7 +135,7 @@ export default function Gallery() {
                     transition={{ duration: 0.8 }}
                     className="relative group w-full max-w-[400px] mx-auto"
                 >
-                    <div className="relative h-[400px] sm:h-[450px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                    <div className="relative h-[400px] sm:h-[450px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50 bg-white/20 backdrop-blur-md">
                         {/* The Actual Image (Underneath) */}
                         <div className="absolute inset-0">
                             <Image
@@ -187,7 +187,7 @@ export default function Gallery() {
                     transition={{ duration: 0.8 }}
                     className="relative w-full max-w-[400px] mx-auto"
                 >
-                    <div className="relative h-[400px] sm:h-[450px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-rose-950">
+                    <div className="relative h-[400px] sm:h-[450px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50 bg-rose-950/40 backdrop-blur-md">
 
                         {/* The Image (Hidden initially) */}
                         <div className={`absolute inset-0 transition-all duration-1000 ${isFilled ? 'opacity-100 blur-0' : 'opacity-30 blur-2xl'}`}>
@@ -266,7 +266,7 @@ export default function Gallery() {
                         onClick={() => setSelectedPhoto(null)}
                     >
                         <div
-                            className="bg-white rounded-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] flex flex-col items-center relative"
+                            className="bg-white/60 backdrop-blur-xl rounded-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] flex flex-col items-center relative border-4 border-white/50 shadow-2xl"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <button
@@ -285,7 +285,7 @@ export default function Gallery() {
                                 />
                             </div>
 
-                            <div className="p-8 text-center bg-rose-50 w-full flex-1 flex flex-col justify-center">
+                            <div className="p-8 text-center bg-transparent w-full flex-1 flex flex-col justify-center">
                                 <h3 className="text-2xl md:text-3xl font-serif text-rose-800 font-bold mb-4">
                                     {selectedPhoto.title}
                                 </h3>

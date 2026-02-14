@@ -10,7 +10,7 @@ import Proposal from "@/components/Proposal";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-rose-50/50 overflow-x-hidden">
+    <main className="min-h-screen bg-transparent overflow-x-hidden">
       <Hero />
       <TruthOrDare />
       <LoveWheel />

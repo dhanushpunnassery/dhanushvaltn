@@ -40,7 +40,7 @@ export default function Proposal() {
     };
 
     return (
-        <section className="py-24 px-4 bg-rose-900 text-white relative overflow-hidden text-center">
+        <section className="py-24 px-4 bg-transparent text-white relative overflow-hidden text-center">
             {/* Background floating hearts */}
             <div className="absolute inset-0 pointer-events-none opacity-10">
                 {[...Array(20)].map((_, i) => (
@@ -109,7 +109,7 @@ export default function Proposal() {
                         <motion.div
                             initial={{ scale: 0.5, y: 100 }}
                             animate={{ scale: 1, y: 0 }}
-                            className="bg-white rounded-[3rem] overflow-hidden max-w-2xl w-full relative p-8 md:p-16 text-center shadow-[0_0_50px_rgba(255,100,100,0.5)] border-4 border-rose-200"
+                            className="bg-white/80 backdrop-blur-2xl rounded-[3rem] overflow-hidden max-w-2xl w-full relative p-8 md:p-16 text-center shadow-[0_0_50px_rgba(255,100,100,0.3)] border-4 border-white/50"
                         >
                             <button
                                 onClick={() => setShowPopup(false)}

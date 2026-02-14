@@ -110,7 +110,7 @@ function GameLogic({ photoConfig }: { photoConfig: typeof PUZZLE_PHOTOS['park'] 
     }, [pieces]);
 
     return (
-        <main className="min-h-screen bg-rose-50 flex flex-col items-center py-8">
+        <main className="min-h-screen bg-transparent flex flex-col items-center py-8">
             <div className="w-full max-w-6xl px-4 mb-4 flex justify-between items-center">
                 <Link href="/" className="flex items-center text-rose-600 font-bold hover:underline">
                     <ArrowLeft className="w-5 h-5 mr-2" /> Back to Home

@@ -60,7 +60,7 @@ export default function LoveWheel() {
     };
 
     return (
-        <section className="py-20 px-4 bg-rose-50/50 text-center overflow-hidden">
+        <section className="py-20 px-4 bg-transparent text-center overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
