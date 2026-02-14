@@ -17,11 +17,11 @@ export default function MosaicGame() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl w-full">
                 {Object.entries(PUZZLE_PHOTOS).map(([key, photo]) => (
-                    <Link href={`/puzzle?id=${key}`} key={key}>
+                    <Link href={`/puzzle?id=${key}`} key={key} className="w-full max-w-sm mx-auto">
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white p-4 rounded-2xl shadow-xl border-4 border-white hover:border-rose-300 transition-colors group cursor-pointer"
+                            className="bg-white p-4 rounded-2xl shadow-xl border-4 border-white hover:border-rose-300 transition-colors group cursor-pointer w-full"
                         >
                             <div className="relative h-64 w-full overflow-hidden rounded-xl mb-4">
                                 <Image

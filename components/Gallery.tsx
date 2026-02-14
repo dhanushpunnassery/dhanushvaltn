@@ -133,9 +133,9 @@ export default function Gallery() {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative group perspective-1000"
+                    className="relative group w-full max-w-[400px] mx-auto"
                 >
-                    <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                    <div className="relative h-[400px] sm:h-[450px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
                         {/* The Actual Image (Underneath) */}
                         <div className="absolute inset-0">
                             <Image
@@ -143,6 +143,7 @@ export default function Gallery() {
                                 alt="Secret Memory"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
 
@@ -155,12 +156,12 @@ export default function Gallery() {
                         />
 
                         {/* Content Overlay (Once Revealed) */}
-                        <div className={`absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-left transition-opacity duration-500 ${isScratched ? 'opacity-100' : 'opacity-0'}`}>
-                            <h3 className="text-2xl font-bold text-white mb-2">{moments[0].title}</h3>
-                            <p className="text-rose-100 text-sm mb-4 line-clamp-2">{moments[0].description}</p>
+                        <div className={`absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 md:p-6 text-left transition-opacity duration-500 ${isScratched ? 'opacity-100' : 'opacity-0'}`}>
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{moments[0].title}</h3>
+                            <p className="text-rose-100 text-xs md:text-sm mb-4 line-clamp-2">{moments[0].description}</p>
                             <button
                                 onClick={() => setSelectedPhoto(moments[0])}
-                                className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full backdrop-blur-sm text-sm transition-colors border border-white/50"
+                                className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full backdrop-blur-sm text-xs md:text-sm transition-colors border border-white/50"
                             >
                                 Read Full Note
                             </button>
@@ -168,8 +169,8 @@ export default function Gallery() {
 
                         {/* Instruction Hint (Floating) - Only if not scratched */}
                         {!isScratched && (
-                            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none animate-bounce">
-                                <div className="bg-white/90 text-rose-900 px-4 py-2 rounded-full shadow-lg flex items-center gap-2 text-sm font-bold">
+                            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none animate-bounce whitespace-nowrap">
+                                <div className="bg-white/90 text-rose-900 px-4 py-2 rounded-full shadow-lg flex items-center gap-2 text-xs md:text-sm font-bold">
                                     <Eraser className="w-4 h-4" />
                                     Rub screen to see!
                                 </div>
@@ -184,9 +185,9 @@ export default function Gallery() {
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative"
+                    className="relative w-full max-w-[400px] mx-auto"
                 >
-                    <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-rose-950">
+                    <div className="relative h-[400px] sm:h-[450px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-rose-950">
 
                         {/* The Image (Hidden initially) */}
                         <div className={`absolute inset-0 transition-all duration-1000 ${isFilled ? 'opacity-100 blur-0' : 'opacity-30 blur-2xl'}`}>
@@ -195,12 +196,13 @@ export default function Gallery() {
                                 alt="Locked Memory"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
 
                         {/* Interactive Layer */}
-                        <div className={`absolute inset-0 z-10 flex flex-col items-center justify-center p-6 transition-opacity duration-500 ${isFilled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                            <div className="relative cursor-pointer group"
+                        <div className={`absolute inset-0 z-10 flex flex-col items-center justify-center p-4 md:p-6 transition-opacity duration-500 ${isFilled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                            <div className="relative cursor-pointer group scale-75 sm:scale-100"
                                 onMouseDown={startFilling}
                                 onMouseUp={stopFilling}
                                 onMouseLeave={stopFilling}
@@ -212,38 +214,38 @@ export default function Gallery() {
                                     animate={{ scale: [1, 1.1, 1] }}
                                     transition={{ duration: 0.8, repeat: Infinity }}
                                 >
-                                    <Heart className="w-32 h-32 text-rose-700/50 fill-current" />
+                                    <Heart className="w-24 h-24 sm:w-32 sm:h-32 text-rose-700/50 fill-current" />
                                 </motion.div>
 
                                 {/* Filling Heart */}
                                 <div className="absolute inset-0 overflow-hidden flex items-end justify-center">
                                     <div
-                                        className="w-32 bg-rose-500 transition-all duration-100 ease-linear"
+                                        className="w-24 sm:w-32 bg-rose-500 transition-all duration-100 ease-linear"
                                         style={{ height: `${loveLevel}%` }}
                                     >
-                                        <Heart className="w-32 h-32 text-rose-500 fill-current absolute bottom-0" />
+                                        <Heart className="w-24 h-24 sm:w-32 sm:h-32 text-rose-500 fill-current absolute bottom-0" />
                                     </div>
                                 </div>
 
                                 {/* Mask to shape the filling div into a heart */}
                                 <div className="absolute inset-0 flex items-center justify-center mix-blend-destination-in">
-                                    <Heart className="w-32 h-32 fill-black" />
+                                    <Heart className="w-24 h-24 sm:w-32 sm:h-32 fill-black" />
                                 </div>
 
 
-                                <p className="mt-8 text-rose-100 font-bold text-lg animate-pulse select-none">
+                                <p className="mt-8 text-rose-100 font-bold text-base sm:text-lg animate-pulse select-none text-center">
                                     Hold to Fill with Love {Math.floor(loveLevel)}%
                                 </p>
                             </div>
                         </div>
 
                         {/* Content Overlay (Once Unlocked) */}
-                        <div className={`absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-left transition-opacity duration-500 ${isFilled ? 'opacity-100' : 'opacity-0'}`}>
-                            <h3 className="text-2xl font-bold text-white mb-2">{moments[1].title}</h3>
-                            <p className="text-rose-100 text-sm mb-4 line-clamp-2">{moments[1].description}</p>
+                        <div className={`absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 md:p-6 text-left transition-opacity duration-500 ${isFilled ? 'opacity-100' : 'opacity-0'}`}>
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{moments[1].title}</h3>
+                            <p className="text-rose-100 text-xs md:text-sm mb-4 line-clamp-2">{moments[1].description}</p>
                             <button
                                 onClick={() => setSelectedPhoto(moments[1])}
-                                className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full backdrop-blur-sm text-sm transition-colors border border-white/50"
+                                className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full backdrop-blur-sm text-xs md:text-sm transition-colors border border-white/50"
                             >
                                 Read Full Note
                             </button>

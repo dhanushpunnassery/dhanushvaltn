@@ -5,7 +5,7 @@ import FloatingPetals from './FloatingPetals';
 
 export default function Hero() {
     return (
-        <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-rose-100 via-pink-100 to-red-50 text-center p-6">
+        <section className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-rose-100 via-pink-100 to-red-50 text-center p-4 md:p-6">
             <FloatingPetals />
 
             <motion.div

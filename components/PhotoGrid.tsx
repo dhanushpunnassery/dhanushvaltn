@@ -33,8 +33,8 @@ export default function PhotoGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ scale: 1.02 }}
-                            className={`relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300 ${index === 0 ? 'sm:col-span-2 sm:row-span-2' :
-                                    index === 4 ? 'sm:col-span-2' : 'col-span-1'
+                            className={`relative rounded-2xl overflow-hidden cursor-pointer group shadow-md hover:shadow-xl transition-all duration-300 w-full ${index === 0 ? 'sm:col-span-2 sm:row-span-2 min-h-[300px]' :
+                                    index === 4 ? 'sm:col-span-2 min-h-[200px]' : 'col-span-1 min-h-[200px]'
                                 }`}
                             onClick={() => setSelectedImage(img.src)}
                         >

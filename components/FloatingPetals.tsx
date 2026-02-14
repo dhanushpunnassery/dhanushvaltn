@@ -11,7 +11,7 @@ const Petal = ({ delay, duration, x }: { delay: number; duration: number; x: num
             y: '105vh',
             opacity: [0, 1, 1, 0],
             rotate: [0, 180, 360],
-            x: [`${x}vw`, `${x + (Math.random() * 10 - 5)}vw`], // Drift slightly
+            x: [`${x}vw`, `${Math.max(0, Math.min(100, x + (Math.random() * 10 - 5)))}vw`], // Drift within bounds
         }}
         transition={{
             duration: duration,

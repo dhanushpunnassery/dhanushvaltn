@@ -134,9 +134,9 @@ export default function LoveNote() {
                                 }}
                             >
                                 <Heart
-                                    className={`fill-current drop-shadow-lg ${target.type === 'boss' ? 'w-40 h-40 text-red-600 filter drop-shadow-[0_0_15px_rgba(255,0,0,0.8)]' :
-                                        target.type === 'fast' ? 'w-12 h-12 text-rose-400' :
-                                            'w-16 h-16'
+                                    className={`fill-current drop-shadow-lg ${target.type === 'boss' ? 'w-24 h-24 sm:w-40 sm:h-40 text-red-600 filter drop-shadow-[0_0_15px_rgba(255,0,0,0.8)]' :
+                                        target.type === 'fast' ? 'w-10 h-10 sm:w-12 sm:h-12 text-rose-400' :
+                                            'w-12 h-12 sm:w-16 sm:h-16'
                                         }`}
                                 />
                             </motion.button>

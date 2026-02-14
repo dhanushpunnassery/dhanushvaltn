@@ -17,12 +17,15 @@
   }
 }
 
+html,
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-sans);
   /* Use Lato by default */
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 h1,
