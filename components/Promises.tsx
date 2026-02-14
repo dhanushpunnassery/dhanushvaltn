@@ -68,13 +68,13 @@ export default function Promises() {
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
                             whileHover={{ y: -10 }}
-                            className="bg-white/40 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-rose-300 hover:shadow-2xl transition-all group"
+                            className="bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white/40 hover:border-rose-300 hover:shadow-2xl transition-all group"
                         >
                             <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-white shadow-sm group-hover:scale-110 transition-transform duration-500`}>
                                 <promise.icon className={`w-8 h-8 text-rose-500`} />
                             </div>
-                            <h3 className="text-xl font-bold text-rose-900 mb-3">{promise.title}</h3>
-                            <p className="text-rose-700/80 leading-relaxed font-serif text-lg">
+                            <h3 className="text-xl font-bold text-rose-950 mb-3">{promise.title}</h3>
+                            <p className="text-rose-900 leading-relaxed font-serif text-lg">
                                 "{promise.text}"
                             </p>
                         </motion.div>
